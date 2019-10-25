@@ -3,9 +3,9 @@ def bft(start_node):
     q = Queue()
 
     # make a set, to track all the nodes we have already visited
-    visited = set()
+    visited = set() # use a set to get unique values, no duplicates
 
-    # enqueue the start node
+    # enqueue the first node
     q.enqueue(start_node)
 
     # while queue isn't empty:
@@ -17,13 +17,18 @@ def bft(start_node):
 
     ## mark the current node as visited by putting it in our visited set
             visited.add(current_node)
+            print(current_node)
 
-    ## get all of the current node's friends / neighbors
+    ## get all of the current node's neighbors
             neighbors = getNeighbors()
 
-    ## for each of those friends:
+    ## for each of those neighbors:
             for neighbor in neighbors:
     ## put them into our queue to be visited
                 q.enqueue(neighbor)
+
+## And that's all there is to it!
+
+# Time Complexity : O(E + V) Linear
 
 
