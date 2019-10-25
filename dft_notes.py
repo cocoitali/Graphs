@@ -7,7 +7,7 @@ def dft(start_node):
     # make a set for visited nodes
     visited = set()
     # put the start node on the stack
-    stack.push(start_node)
+    stack.append(start_node)
     # while the stack isn't empty:
     while len(stack):
         # pop off whatever is on top of the stack, this is our current node
